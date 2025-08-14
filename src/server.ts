@@ -10,7 +10,7 @@ if (!jwtPrivateKey) {
 }
 
 mongoose
-    .connect('mongodb://localhost/node-v1')
+    .connect('mongodb://localhost/express-mongo-starter-kit')
     .then(() => {
         console.log('Connected to MongoDB');
         app.listen(8000, () => {

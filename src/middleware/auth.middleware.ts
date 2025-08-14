@@ -15,6 +15,9 @@ function auth(req: AuthenticatedRequest, res: Response, next: NextFunction) {
     try {
         const decoded = jwt.verify(token, config.get<string>('JWT_PRIVATE_KEY'));
         req.user = decoded;
+        if (typeof decoded === 'object' && '_id' in decoded) {
+            req.body.userId = (decoded as JwtPayload & { _id?: string })._id as string;
+        }
         next();
     } catch (error) {
         res.status(400).send('Invalid token');

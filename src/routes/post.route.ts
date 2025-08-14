@@ -32,7 +32,6 @@ router.get('/:userId', auth, async (req: AuthenticatedRequest, res: Response) =>
 router.post('/', auth, async (req: AuthenticatedRequest, res: Response) => {
     const { error } = validate(req.body);
     if (error) return res.status(400).send(error.details[0].message);
-
     const post: IPost = new Post(_.pick(req.body, ['title', 'content', 'userId']));
     await post.save();
 
