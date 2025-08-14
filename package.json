@@ -14,7 +14,6 @@
   },
   "author": "Amarjit Pheiroijam",
   "license": "ISC",
-  "type": "module",
   "bugs": {
     "url": "https://github.com/Amarjit-ph/node-express-mongo-starter-kit/issues"
   },
