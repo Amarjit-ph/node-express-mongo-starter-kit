@@ -1,0 +1,32 @@
+{
+  "compilerOptions": {
+    /* Output */
+    "outDir": "./dist", // Build output folder
+    "rootDir": "./src", // Source folder
+    /* Module System */
+    "module": "CommonJS", // Use CommonJS for Node
+    "moduleResolution": "Node", // Resolve like Node.js
+    "esModuleInterop": true, // Allow default imports from CommonJS
+    "allowSyntheticDefaultImports": true, // Don't force `import * as`
+    "resolveJsonModule": true, // Allow importing JSON files
+    /* Language Target */
+    "target": "ES2020", // Modern JS features
+    "lib": [
+      "ES2020"
+    ], // Standard library
+    /* Strictness */
+    "strict": true, // Enable all strict type-checking
+    "skipLibCheck": true, // Skip type checks for dependencies
+    /* Source Maps */
+    "sourceMap": true, // Enable for debugging
+    "inlineSources": true // Include source in maps
+  },
+  "include": [
+    "src"
+  ],
+  // Include your source folder
+  "exclude": [
+    "node_modules",
+    "dist"
+  ] // Ignore these folders
+}
